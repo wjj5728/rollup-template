@@ -3,7 +3,6 @@
         "target": "ES5",
         "module": "ESNext",
         "declaration": true,
-        "removeComments": true,
         "declarationDir": "./types"
     },
     "include": ["src/**/*.ts"],
