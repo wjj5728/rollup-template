@@ -3,10 +3,10 @@ var pkg = require('./package.json');
 var version = pkg.version;
 
 var banner = `/*!
- * ${pkg.name} ${version} (https://github.com/jdeseva/@jsmini/util-tools)
- * API https://github.com/jdeseva/@jsmini/util-tools/blob/master/doc/api.md
- * Copyright 2020-${new Date().getFullYear()} jdeseva. All Rights Reserved
- * Licensed under MIT (https://github.com/jdeseva/@jsmini/util-tools/blob/master/LICENSE)
+ * ${pkg.name} ${version} 
+ * Copyright 2020-${new Date().getFullYear()} wjj5728. All Rights Reserved
+ * https://github.com/wjj5728/-jjlib-utils
+ * Licensed under MIT LICENSE
  */
 `;
 

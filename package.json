@@ -1,6 +1,6 @@
 {
   "name": "@jjlib/utils",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -8,18 +8,17 @@
   "sideEffects": false,
   "dependencies": {},
   "devDependencies": {
-    "es5-shim": "^4.5.14",
-    "rollup": "0.57.1",
-    "rollup-plugin-commonjs": "^8.3.0",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-node-resolve": "^3.0.3",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "clean": "rimraf ./dist && rimraf ./types",
+    "build": "npm run clean && rollup -c"
   },
   "keywords": [],
   "author": "qq184322331@gmail.com",

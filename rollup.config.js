@@ -1,6 +1,6 @@
 var typescript = require('rollup-plugin-typescript2');
-var nodeResolve = require('rollup-plugin-node-resolve');
-var commonjs = require('rollup-plugin-commonjs');
+import nodeResolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 var config = require('./config.js');
 module.exports = {
@@ -9,11 +9,9 @@ module.exports = {
     {
       file: 'dist/index.js',
       format: 'umd',
-      // When export and export default are not used at the same time, set legacy to true.
-      legacy: true,
       name: config.name,
       banner: config.banner,
-      plugins: [terser()],
+      plugins: [],
     },
     {
       file: 'dist/index.es.js',
@@ -21,6 +19,7 @@ module.exports = {
       plugins: [],
     },
   ],
+  external: [],
   plugins: [
     nodeResolve({
       main: true,
@@ -32,5 +31,6 @@ module.exports = {
     typescript({
       useTsconfigDeclarationDir: true,
     }),
+    terser(),
   ],
 };

@@ -1,7 +1,7 @@
 /*!
- * @jjlib/utils 1.0.0 (https://github.com/jdeseva/@jsmini/util-tools)
- * API https://github.com/jdeseva/@jsmini/util-tools/blob/master/doc/api.md
- * Copyright 2020-2020 jdeseva. All Rights Reserved
- * Licensed under MIT (https://github.com/jdeseva/@jsmini/util-tools/blob/master/LICENSE)
+ * @jjlib/utils 1.0.3 
+ * Copyright 2020-2020 wjj5728. All Rights Reserved
+ * https://github.com/wjj5728/-jjlib-utils
+ * Licensed under MIT LICENSE
  */
-!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e=e||self)["@jjlib/utils"]={})}(this,(function(e){"use strict";var o=function(){function e(){console.log("Game")}return e.prototype.test=function(){console.log("test")},e}(),t=function(){function e(){console.log(21313)}return e.prototype.test=function(){console.log(123132)},e}();e.Game=o,e.YP=t,Object.defineProperty(e,"__esModule",{value:!0})}));
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self)["@jjlib/utils"]={})}(this,(function(e){"use strict";var t=function(){this.a=0,console.log(22222222222222223e23)};e.test=t,Object.defineProperty(e,"__esModule",{value:!0})}));

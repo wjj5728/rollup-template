@@ -1,3 +1,5 @@
-import { Game } from './game/index';
-import { YP } from './yp/index';
-export { Game, YP };
+declare class test {
+    private a;
+    constructor();
+}
+export { test };
