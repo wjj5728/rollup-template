@@ -5,20 +5,21 @@ module.exports = {
     es6: true,
     node: true,
   },
-  parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended'],
+  parser: "@typescript-eslint/parser",
+  extends: ["eslint:recommended"],
   // globals: {
   //   Atomics: 'readonly',
   //   SharedArrayBuffer: 'readonly',
   //   ENV: true,
   // },
   parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: './',
+    project: "./tsconfig.json",
+    createDefaultProgram: true,
+    tsconfigRootDir: "./",
     ecmaVersion: 2019,
-    sourceType: 'module',
+    sourceType: "module",
   },
   rules: {
-    quotes: ['error', 'single'],
+    quotes: ["error", "single"],
   },
 };
