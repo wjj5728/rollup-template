@@ -1,7 +1,10 @@
+/**test */
 class test {
-  private a = 0;
+  /**a */
+  private a: number = 0;
   constructor() {
-    console.log(2222222222222222222222222222222222222222);
+    console.log(this.a);
+    console.log('2222222222222222222222222222222222222222');
   }
 }
 export { test };

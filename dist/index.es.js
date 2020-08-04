@@ -1,1 +1,12 @@
-var o=function(){this.a=0,console.log(22222222222222223e23)};export{o as test};
+/**test */
+var test = /** @class */ (function () {
+    function test() {
+        /**a */
+        this.a = 0;
+        console.log(this.a);
+        console.log('2222222222222222222222222222222222222222');
+    }
+    return test;
+}());
+
+export { test };

@@ -1,8 +1,10 @@
-var typescript = require('rollup-plugin-typescript2');
+import typescript from 'rollup-plugin-typescript2';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import { eslint } from 'rollup-plugin-eslint';
 var config = require('./config.js');
+const env = process.env.NODE_ENV == 'production';
 module.exports = {
   input: 'src/index.ts',
   output: [
@@ -21,6 +23,12 @@ module.exports = {
   ],
   external: [],
   plugins: [
+    eslint({
+      throwOnError: true,
+      throwOnWarning: true,
+      include: ['src/**'],
+      exclude: ['node_modules/**'],
+    }),
     nodeResolve({
       main: true,
       extensions: ['.ts', '.js'],
@@ -31,6 +39,6 @@ module.exports = {
     typescript({
       useTsconfigDeclarationDir: true,
     }),
-    terser(),
+    env && terser(),
   ],
 };
