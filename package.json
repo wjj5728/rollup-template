@@ -22,7 +22,8 @@
   "scripts": {
     "clean": "rimraf ./dist && rimraf ./types",
     "build": "npm run clean && cross-env NODE_ENV=production rollup -c",
-    "dev": "cross-env NODE_ENV=dev rollup -c -w"
+    "dev": "cross-env NODE_ENV=dev rollup -c -w",
+    "publish": "npm publish"
   },
   "keywords": [],
   "author": "qq184322331@gmail.com",
