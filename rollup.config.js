@@ -13,6 +13,8 @@ module.exports = {
       format: 'umd',
       name: config.name,
       banner: config.banner,
+      /**如果需要去除Object.definePropert 这个ie8不支持 */
+      esModule: false,
       plugins: [],
     },
     {
