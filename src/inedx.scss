@@ -1,0 +1,14 @@
+#app {
+  background-color: #fff;
+  transform: translate(0, 0);
+
+  @keyframes test {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

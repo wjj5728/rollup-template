@@ -4,25 +4,4 @@
  * https://github.com/wjj5728/rollup-template
  * Licensed under MIT LICENSE
  */
-
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['@jjlib/utils'] = {}));
-}(this, (function (exports) { 'use strict';
-
-  /**test */
-  var test = /** @class */ (function () {
-      function test() {
-          /**a */
-          this.a = 0;
-          console.log(this.a);
-          console.log('this');
-          console.log('2222222222222222222222222222222222222222');
-      }
-      return test;
-  }());
-
-  exports.test = test;
-
-})));
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e="undefined"!=typeof globalThis?globalThis:e||self)["@jjlib/utils"]={})}(this,(function(e){"use strict";var o=function(){this.a=0,console.log(this.a),console.log("this"),console.log("2222222222222222222222222222222222222222")};e.test=o}));

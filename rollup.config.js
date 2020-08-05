@@ -3,6 +3,9 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import { eslint } from 'rollup-plugin-eslint';
+import postcss from 'rollup-plugin-postcss';
+import cssnano from 'cssnano';
+import postcssPresetEnv from 'postcss-preset-env';
 var config = require('./config.js');
 const env = process.env.NODE_ENV == 'production';
 module.exports = {
@@ -20,16 +23,22 @@ module.exports = {
     {
       file: 'dist/index.es.js',
       format: 'es',
+      banner: config.banner,
       plugins: [],
     },
   ],
   external: [],
   plugins: [
-    eslint({
-      throwOnError: true,
-      throwOnWarning: true,
-      include: ['src/**'],
-      exclude: ['node_modules/**'],
+    postcss({
+      extract: true,
+      fileName: 'index.css',
+      extensions: ['.scss', '.css'],
+      plugins: [
+        postcssPresetEnv({
+          autoprefixer: { cascade: true },
+        }),
+        cssnano(),
+      ],
     }),
     nodeResolve({
       main: true,
@@ -37,6 +46,12 @@ module.exports = {
     }),
     commonjs({
       include: 'node_modules/**',
+    }),
+    eslint({
+      throwOnError: true,
+      throwOnWarning: true,
+      include: ['src/**/*.ts'],
+      exclude: ['node_modules/**'],
     }),
     typescript({
       useTsconfigDeclarationDir: true,
